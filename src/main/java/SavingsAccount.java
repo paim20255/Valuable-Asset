@@ -13,17 +13,25 @@ public class SavingsAccount implements BankAccount {
 
     @Override
     public double withdraw(double amount) {
-        return 0;
-    }
+        if (this.balance > amount) {
+            this.balance -= amount;
+            return amount;
 
+        } else {
+            double withdrawAmount = this.balance;
+            this.balance = 0;
+            return withdrawAmount;
+
+        }
+    }
     @Override
     public double getBalance() {
-        return 0;
+        return this.balance;
     }
 
     @Override
     public double getValue() {
-        return 0;
+        return this.balance;
     }
 
 }
