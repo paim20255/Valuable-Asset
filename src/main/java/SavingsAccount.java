@@ -2,9 +2,13 @@ public class SavingsAccount implements BankAccount {
     private double balance;
     private double interestRate = 0.033;
 
+    public SavingsAccount(double balance) {
+        this.balance = balance;
+    }
+
     @Override
     public void deposit(double amount) {
-
+        this.balance += amount;
     }
 
     @Override
@@ -21,4 +25,5 @@ public class SavingsAccount implements BankAccount {
     public double getValue() {
         return 0;
     }
+
 }
