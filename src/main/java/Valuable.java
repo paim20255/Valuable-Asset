@@ -1,4 +1,4 @@
 public interface Valuable {
+    double getValue();
 
-    public double getValue();
 }
